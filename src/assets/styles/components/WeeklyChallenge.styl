@@ -1,16 +1,40 @@
 @import '../_variables.styl'
 
 .weekly-challenge
-  height 50vh
-.weekly-challenge img
-  min-width 320px
+  align-items center
   width 100%
+  min-width 320px
+  height 40vh
+  background-image: url('../../static/weekChallenge.svg')
+  background-position center
+  background-size cover
+  color just-white
+  background-repeat no-repeat
+.weekly-challenge-container
+  display flex
+  flex-direction column
+  justify-content space-evenly
+  align-items center
+  height 100%
+.weekly-challenge--title
+  text-align center
+  transform rotate(-8deg)
+  font-size 3.2rem
+.weecky-challenge--desc
+  margin 0 auto
+  width 280px
+  text-align center
+  transform rotate(5deg)
+  font-size 1.8rem
+  letter-spacing 3.6px
 .weekly-challenge--button
+  display inline-block
+  width: 150px
   font-size: 1.3rem
   text-decoration none
-  border 1px solid train-yellow
   padding 10px
-  border-radius 25px
   color train-yellow
   text-align center
   letter-spacing: 1px
+  border-radius 25px
+  border 1px solid train-yellow
