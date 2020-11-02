@@ -17,7 +17,6 @@ const Header = () => (
       </h1>
       <p>Next Meeting</p>
     </div>
-    <a className='header--button' href="/">Conduct Code</a>
   </header>
 );
 
