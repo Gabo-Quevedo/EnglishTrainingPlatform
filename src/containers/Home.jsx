@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import '../assets/styles/index.styl';
 
 const Home = () => (
-  <div className='App'>
+  <div className='Home'>
     <>
       <Header />
       <NextTopic />
