@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 import '../assets/styles/components/WeeklyChallenge.styl';
 
 const WeeklyChallenge = () => (
@@ -10,7 +11,7 @@ const WeeklyChallenge = () => (
       <p className='weecky-challenge-container--desc'>
         Your own Topic about anythig you want to Share
       </p>
-      <a href='' className='weekly-challenge-container--button'>New Challenge Request</a>
+      <Link to='/'>About</Link>
     </div>
   </section>
 );

@@ -3,7 +3,7 @@ import Header from '../components/Header';
 import NextTopic from '../components/NextTopic';
 import WeeklyChallenge from '../components/WeeklyChallenge';
 import Participants from '../components/Participants';
-import MeetingDynamic from '../components/MeetingDynamic';
+import Dynamic from '../components/Dynamic';
 import Footer from '../components/Footer';
 import '../assets/styles/index.styl';
 
@@ -12,9 +12,9 @@ const App = () => (
     <>
       <Header />
       <NextTopic />
+      <Dynamic />
       <WeeklyChallenge />
       <Participants />
-      <MeetingDynamic />
       <Footer />
     </>
   </div>
