@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { loginRequest } from '../actions';
 import goolgeIcon from '../assets/static/google-icon.png';
 import twitterIcon from '../assets/static/twitter-icon.png';
-import '../assets/styles/Login.styl';
+import '../assets/styles/components/Login.styl';
 
 const Login = (props) => {
   const [form, setValues] = useState({
