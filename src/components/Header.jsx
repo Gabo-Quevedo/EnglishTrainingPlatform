@@ -1,20 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 import gravatar from '../utils/gravatar';
 import { logoutRequest } from '../actions';
 import TrenIcon from '../assets/static/tren-icon.svg';
 import '../assets/styles/components/Header.styl';
 
 const Header = (props) => {
-  const { user } = props;
+  const { user, isLogin, isRegister } = props;
   const hasUser = Object.keys(user).length > 0;
   const handleLogout = () => {
     props.logoutRequest({});
   };
 
+  const headerClass = classNames('header', {
+    isLogin,
+    isRegister,
+  });
   return (
-    <header className='header'>
+    <header className={headerClass}>
       <div className='header--timeleft-container'>
         <img src={TrenIcon} alt='logo-tren' />
         <h1 className='header--time-left'>

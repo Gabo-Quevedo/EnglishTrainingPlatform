@@ -1,15 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/components/Footer.styl';
 
 import LogoOrganic from '../assets/static/LogoOrganic12.svg';
 
 const Footer = () => (
   <footer>
-    <div className="footer-container">
+    <div className='footer-container'>
       <section className='footer-container--info'>
-        <li><a href=''>Admins</a></li>
-        <li><a href=''>Why we create this</a></li>
-        <li><a href=''>Inspired by</a></li>
+        <li><Link to='/'>Admins</Link></li>
+        <li><Link to='/'>Why we create this</Link></li>
+        <li><Link to='/'>Inspired by</Link></li>
       </section>
       <section className='footer-container--logo'>
         <img src={LogoOrganic} alt='' />
