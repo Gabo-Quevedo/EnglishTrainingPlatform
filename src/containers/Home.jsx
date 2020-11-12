@@ -6,6 +6,7 @@ import WeeklyChallenge from '../components/WeeklyChallenge';
 import Participants from '../components/Participants';
 import Dynamic from '../components/Dynamic';
 import PrepareLink from '../components/PrepareLink';
+import Requested from '../components/Requested';
 import '../assets/styles/index.styl';
 
 const Home = ({ hola }) => (
@@ -16,6 +17,7 @@ const Home = ({ hola }) => (
     <WeeklyChallenge />
     <Participants />
     <PrepareLink />
+    <Requested />
   </>
 
 );
