@@ -5,6 +5,7 @@ import NextTopic from '../components/NextTopic';
 import WeeklyChallenge from '../components/WeeklyChallenge';
 import Participants from '../components/Participants';
 import Dynamic from '../components/Dynamic';
+import PrepareLink from '../components/PrepareLink';
 import '../assets/styles/index.styl';
 
 const Home = ({ hola }) => (
@@ -14,6 +15,7 @@ const Home = ({ hola }) => (
     <Dynamic />
     <WeeklyChallenge />
     <Participants />
+    <PrepareLink />
   </>
 
 );
