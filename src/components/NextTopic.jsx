@@ -7,7 +7,7 @@ const NextTopic = () => (
     <div className='next-topic-container'>
       <h1 className='next-topic--title'>Next Topic</h1>
       <h3 className='next-topic--current'>Topic Name</h3>
-      <Link to='/' className='next-topic--button'>Your Topic Poll</Link>
+      <Link to='/ss' className='next-topic--button'>Your Topic Poll</Link>
     </div>
   </section>
 );

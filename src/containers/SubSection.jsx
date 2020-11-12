@@ -2,10 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SubSectionHeader from '../components/SubSectionHeader';
+import SubsectionItem from '../components/SubsectionItem';
 
 const SubSection = ({ hola }) => (
   <>
-    <SubSectionHeader />
+    <SubSectionHeader isSubSecChallenge />
+    <SubsectionItem />
   </>
 
 );

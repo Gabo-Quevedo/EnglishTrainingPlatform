@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../assets/styles/components/Participants.styl';
+import '../assets/styles/components/SubsectionItem.styl';
 
 const Participants = () => (
   <section className='participants'>

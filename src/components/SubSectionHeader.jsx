@@ -8,15 +8,14 @@ import TrenIcon from '../assets/static/tren-icon.svg';
 import '../assets/styles/components/SubSectionHeader.styl';
 
 const SubSectionHeader = (props) => {
-  const { user, isLogin, isRegister } = props;
+  const { user, isSubSecChallenge } = props;
   const hasUser = Object.keys(user).length > 0;
   const handleLogout = () => {
     props.logoutRequest({});
   };
 
-  const headerClass = classNames('header', {
-    isLogin,
-    isRegister,
+  const headerClass = classNames('ss-header', {
+    isSubSecChallenge,
   });
   return (
     <header className={headerClass}>
