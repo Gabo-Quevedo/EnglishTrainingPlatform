@@ -7,6 +7,7 @@ import Participants from '../components/Participants';
 import Dynamic from '../components/Dynamic';
 import PrepareLink from '../components/PrepareLink';
 import Requested from '../components/Requested';
+import ManualRelease from '../components/ManualRelease';
 import '../assets/styles/index.styl';
 
 const Home = ({ hola }) => (
@@ -18,6 +19,7 @@ const Home = ({ hola }) => (
     <Participants />
     <PrepareLink />
     <Requested />
+    <ManualRelease />
   </>
 
 );
