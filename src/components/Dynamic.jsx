@@ -1,8 +1,7 @@
 import React from 'react';
-import DyanmicCard from './DynamicCard';
 import '../assets/styles/components/Dynamic.styl';
 
-const Dynamic = () => (
+const Dynamic = ({ children }) => (
   <section className='dynamic'>
     <div className='dynamic-container'>
       <div className='dynamic-container--title'>
@@ -13,10 +12,7 @@ const Dynamic = () => (
         </p>
       </div>
       <div className='dynamic-cards-container'>
-        <DyanmicCard />
-        <DyanmicCard />
-        <DyanmicCard />
-        <DyanmicCard />
+        {children}
       </div>
     </div>
   </section>

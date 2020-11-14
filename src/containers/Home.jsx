@@ -5,6 +5,7 @@ import NextTopic from '../components/NextTopic';
 import WeeklyChallenge from '../components/WeeklyChallenge';
 import Participants from '../components/Participants';
 import Dynamic from '../components/Dynamic';
+import DynamicItem from '../components/DynamicItem';
 import PrepareLink from '../components/PrepareLink';
 import Requested from '../components/Requested';
 import ManualRelease from '../components/ManualRelease';
@@ -14,7 +15,9 @@ const Home = ({ hola }) => (
   <>
     <Header />
     <NextTopic />
-    <Dynamic />
+    <Dynamic>
+      <DynamicItem />
+    </Dynamic>
     <WeeklyChallenge />
     <Participants />
     <PrepareLink />
