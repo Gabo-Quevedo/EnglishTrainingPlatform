@@ -11,13 +11,21 @@ import Requested from '../components/Requested';
 import ManualRelease from '../components/ManualRelease';
 import '../assets/styles/index.styl';
 
-const Home = ({ hola }) => (
+const Home = ({ dynamics }) => (
   <>
     <Header />
     <NextTopic />
-    <Dynamic>
-      <DynamicItem />
-    </Dynamic>
+    {dynamics.length > 0 && (
+      <Dynamic>
+        {dynamics.map(item => (
+          <DynamicItem
+            key={item.id}
+            {...item}
+            isList
+          />
+        ))}
+      </Dynamic>
+    )}
     <WeeklyChallenge />
     <Participants />
     <PrepareLink />
@@ -29,8 +37,7 @@ const Home = ({ hola }) => (
 
 const mapStateToProps = (state) => {
   return {
-    hola: state.hola,
-    // nombre: state.nombre,
+    dynamics: state.dynamics,
   };
 };
 
