@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../containers/Home';
 import Login from '../containers/Login';
 import Register from '../containers/Register';
-import SubSection from '../containers/SubSection';
+import WeekChallenges from '../containers/WeekChallenges';
 import Layout from '../components/Layout';
 
 const App = () => (
@@ -13,8 +13,8 @@ const App = () => (
         <Route exact path='/' component={Home} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
-        <Route exact path='/topics' component={SubSection} />
-        <Route exact path='/ss' component={SubSection} />
+        <Route exact path='/topics' component={WeekChallenges} />
+        <Route exact path='/ss' component={WeekChallenges} />
         <Route component={Home} />
       </Switch>
     </Layout>

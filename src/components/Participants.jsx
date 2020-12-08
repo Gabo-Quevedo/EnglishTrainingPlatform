@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../assets/styles/components/SubsectionItem.styl';
+import '../assets/styles/components/WeekChallengesItem.styl';
 
 const Participants = ({ children }) => (
   <section className='participants'>

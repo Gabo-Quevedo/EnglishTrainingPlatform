@@ -7,12 +7,13 @@ import App from './routes/App';
 
 const initialState = {
   'user': {},
-  'ssList': [
-    'skills',
-    'topics',
-    'challenges',
-    'participants',
-  ],
+  'topicName': 'Topic Name',
+  'ssList': {
+    'skills': 'false',
+    'topics': 'false',
+    'challenges': 'false',
+    'participants': 'false',
+  },
   'dynamics': [
     {
       'id': 1,
