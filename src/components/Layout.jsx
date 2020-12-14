@@ -3,7 +3,9 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => (
   <div className='App'>
-    {children}
+    <div className='app-container'>
+      {children}
+    </div>
     <Footer />
   </div>
 );

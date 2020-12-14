@@ -104,7 +104,7 @@ const initialState = {
           'id': 1,
           'title': 'My Family',
           'minutes': 8,
-          'description': 'My Family description',
+          'description': 'One description about what Im gonna talk about ^^ no more than 140 characters, I dont know what else put here inside, I would use lorem xD',
           'situation': {
             'enable': 'true',
             'request': {
@@ -120,7 +120,7 @@ const initialState = {
           'id': 2,
           'title': 'My Food',
           'minutes': 7,
-          'description': 'My Food description',
+          'description': 'One description about what Im gonna talk about ^^ no more than 140 characters, I dont know what else put here inside, I would use lorem xD',
           'situation': {
             'enable': 'true',
             'request': {
@@ -136,7 +136,7 @@ const initialState = {
           'id': 3,
           'title': 'My Hobbies',
           'minutes': 5,
-          'description': 'My Hobbies description',
+          'description': 'One description about what Im gonna talk about ^^ no more than 140 characters, I dont know what else put here inside, I would use lorem xD',
           'situation': {
             'enable': 'true',
             'request': {
@@ -249,7 +249,7 @@ const initialState = {
           'id': 3,
           'title': 'My Hobbies',
           'minutes': 5,
-          'description': 'My Hobbies description',
+          'description': 'My Hobbies s description',
           'situation': {
             'enable': 'true',
             'request': {
