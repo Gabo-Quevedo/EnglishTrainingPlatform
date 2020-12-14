@@ -6,7 +6,7 @@ const WeeklyChallenge = () => (
   <section className='weekly-challenge'>
     <div className='weekly-challenge-container'>
       <h2 className='weekly-challenge-container--title'>
-        Weeckly Challenge
+        Weekly Challenge
       </h2>
       <p className='weecky-challenge-container--desc'>
         Your own Topic about anythig you want to Share
