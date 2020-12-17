@@ -11,7 +11,7 @@ const WeeklyChallenge = () => (
       <p className='weecky-challenge-container--desc'>
         Your own Topic about anythig you want to Share
       </p>
-      <Link to='/' className='weekly-challenge-container--button'>New Challenge Request</Link>
+      <Link to='/challenges' className='weekly-challenge-container--button'>New Challenge Request</Link>
     </div>
   </section>
 );

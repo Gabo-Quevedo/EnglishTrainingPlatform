@@ -2,17 +2,17 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import SubSectionHeader from '../components/SubSectionHeader';
-import WeekChallengesItem from '../components/WeekChallengesItem';
+import WeekTopicsItem from '../components/WeekTopicsItem';
 import ChallengeRequest from '../components/ChallengeRequest';
 
-const WeekChallenges = ({ challenges }) => {
+const WeekChallenges = ({ topics }) => {
 
   return (
     <div className='ss-main-container'>
-      <SubSectionHeader SsName='Challenges' isSubSecChallenges />
-      {challenges.length > 0 && (
-        challenges.map(item => (
-          <WeekChallengesItem key={item.id} {...item} />
+      <SubSectionHeader SsName='Topics' isSubSecTopics />
+      {topics.length > 0 && (
+        topics.map(item => (
+          <WeekTopicsItem key={item.id} {...item} />
         ))
       )}
       <ChallengeRequest />
@@ -23,7 +23,7 @@ const WeekChallenges = ({ challenges }) => {
 
 const mapStateToProps = (state) => {
   return {
-    challenges: state.users[0].challenges,
+    topics: state.users[0].topics,
   };
 };
 
