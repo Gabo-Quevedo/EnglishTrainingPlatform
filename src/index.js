@@ -8,12 +8,13 @@ import App from './routes/App';
 const initialState = {
   'user': {},
   'partners': [
-    { 'id': 1, 'name': 'Gabo' },
-    { 'id': 2, 'name': 'Sandra' },
-    { 'id': 3, 'name': 'Alberto' },
-    { 'id': 4, 'name': 'Diana' },
-    { 'id': 5, 'name': 'Roger' },
-    { 'id': 6, 'name': 'Robert' }],
+    { 'id': 1, 'name': 'Gabo', 'lastName': 'Last Name' },
+    { 'id': 2, 'name': 'Sandra', 'lastName': 'Last Name' },
+    { 'id': 3, 'name': 'Alberto', 'lastName': 'Last Name' },
+    { 'id': 4, 'name': 'Diana', 'lastName': 'Last Name' },
+    { 'id': 5, 'name': 'Roger', 'lastName': 'Last Name' },
+    { 'id': 6, 'name': 'Robert', 'lastName': 'Last Name' },
+  ],
   'topicName': 'Topic Name',
   'ssList': {
     'skills': 'false',
