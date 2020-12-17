@@ -8,13 +8,13 @@
       "skills": "false",
       "topics": "false",
       "challenges": "false",
-      "participants": "false"
+      "partners": "false"
     },
     "dynamics": [
       {
         "id": 1,
         "title": "Challenge Time",
-        "description": "We hear the Callenges that the Participants prepare for us, they can share their Screen and you should be Muted and listenging preparing your feedback."
+        "description": "We hear the Callenges that the Partners prepare for us, they can share their Screen and you should be Muted and listenging preparing your feedback."
       },
       {
         "id": 2,

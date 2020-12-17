@@ -7,18 +7,25 @@ import App from './routes/App';
 
 const initialState = {
   'user': {},
+  'partners': [
+    { 'id': 1, 'name': 'Gabo' },
+    { 'id': 2, 'name': 'Sandra' },
+    { 'id': 3, 'name': 'Alberto' },
+    { 'id': 4, 'name': 'Diana' },
+    { 'id': 5, 'name': 'Roger' },
+    { 'id': 6, 'name': 'Robert' }],
   'topicName': 'Topic Name',
   'ssList': {
     'skills': 'false',
     'topics': 'false',
     'challenges': 'false',
-    'participants': 'false',
+    'partners': 'false',
   },
   'dynamics': [
     {
       'id': 1,
       'title': 'Challenge Time',
-      'description': 'We hear the Callenges that the Participants prepare for us, they can share their Screen and you should be Muted and listenging preparing your feedback.',
+      'description': 'We hear the Callenges that the Partners prepare for us, they can share their Screen and you should be Muted and listenging preparing your feedback.',
     },
     {
       'id': 2,

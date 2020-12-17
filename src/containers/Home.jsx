@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import NextTopic from '../components/NextTopic';
 import WeeklyChallenge from '../components/WeeklyChallenge';
-import Participants from '../components/Participants';
+import Partners from '../components/Partners';
 import Dynamic from '../components/Dynamic';
 import DynamicItem from '../components/DynamicItem';
 import PrepareLink from '../components/PrepareLink';
@@ -25,7 +25,7 @@ const Home = ({ dynamics }) => (
       </Dynamic>
     )}
     <WeeklyChallenge />
-    <Participants />
+    <Partners />
     <PrepareLink />
     <Requested />
     <ManualRelease />

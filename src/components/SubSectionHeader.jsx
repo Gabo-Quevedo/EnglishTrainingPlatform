@@ -4,13 +4,13 @@ import classNames from 'classnames';
 import { logoutRequest } from '../actions';
 import '../assets/styles/components/SubSectionHeader.styl';
 
-const SubSectionHeader = ({ isSubSecSkills, isSubSecTopics, isSubSecChallenges, isSubSecparticipants, SsName }) => {
+const SubSectionHeader = ({ isSubSecSkills, isSubSecTopics, isSubSecChallenges, isSubSecPartners, SsName }) => {
 
   const headerClass = classNames('ss-header', {
     isSubSecSkills,
     isSubSecTopics,
     isSubSecChallenges,
-    isSubSecparticipants,
+    isSubSecPartners,
   });
   return (
     <header className={headerClass}>
