@@ -23,7 +23,7 @@ const WeekChallenges = ({ challenges }) => {
 
 const mapStateToProps = (state) => {
   return {
-    challenges: state.users[0].challenges,
+    challenges: state.users[1].challenges,
   };
 };
 
