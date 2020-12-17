@@ -5,6 +5,7 @@ import Login from '../containers/Login';
 import Register from '../containers/Register';
 import WeekChallenges from '../containers/WeekChallenges';
 import WeekTopics from '../containers/WeekTopics';
+import WeekSkills from '../containers/WeekSkills';
 import Layout from '../components/Layout';
 
 const App = () => (
@@ -16,6 +17,7 @@ const App = () => (
         <Route exact path='/register' component={Register} />
         <Route exact path='/topics' component={WeekTopics} />
         <Route exact path='/challenges' component={WeekChallenges} />
+        <Route exact path='/skills' component={WeekSkills} />
         <Route component={Home} />
       </Switch>
     </Layout>

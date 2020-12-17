@@ -46,7 +46,14 @@ const Header = (props) => {
             <li><Link to='/'>{user.name}</Link></li> :
             null
           }
-          {hasUser ? <li><Link to='/' onClick={handleLogout}>Cerrar Sesión</Link></li> : (
+          {hasUser ? (
+            <>
+              <li><Link to='/skills'>My Skills</Link></li>
+              <li><Link to='/' onClick={handleLogout}>Log Out</Link></li>
+              {' '}
+
+            </>
+          ) : (
             <li>
               <Link to='/login'>Login</Link>
             </li>

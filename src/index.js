@@ -46,12 +46,24 @@ const initialState = {
       'gender': 'male',
       'enable': 'true',
       'profile': ['user', 'admin', 'sudoAdmin'],
-      'skills': {
-        'listening': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        'reading': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        'writting': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        'speaking': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-      },
+      'skills': [
+        {
+          'id': 1,
+          'listening': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        },
+        {
+          'id': 2,
+          'reading': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        },
+        {
+          'id': 3,
+          'writting': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        },
+        {
+          'id': 4,
+          'speaking': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        },
+      ],
       'topics': [
         {
           'id': 1,
@@ -111,12 +123,24 @@ const initialState = {
       'gender': 'female',
       'enable': 'true',
       'profile': ['user', 'admin', 'sudoAdmin'],
-      'skills': {
-        'listening': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        'reading': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        'writting': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        'speaking': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-      },
+      'skills': [
+        {
+          'id': 1,
+          'listening': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        },
+        {
+          'id': 2,
+          'reading': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        },
+        {
+          'id': 3,
+          'writting': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        },
+        {
+          'id': 4,
+          'speaking': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        },
+      ],
       'topics': [
         {
           'id': 1,

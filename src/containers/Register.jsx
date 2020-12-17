@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Header from '../components/Header';
 import { registerRequest } from '../actions';
 import '../assets/styles/components/Register.styl';
 
@@ -27,7 +26,6 @@ const Register = (props) => {
 
   return (
     <>
-      <Header isRegister />
       <section className='register'>
         <section className='register__container'>
           <h2>Regístrate</h2>
