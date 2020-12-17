@@ -1,10 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import gravatar from '../utils/gravatar';
 import { logoutRequest } from '../actions';
-import TrenIcon from '../assets/static/tren-icon.svg';
 import '../assets/styles/components/SubSectionHeader.styl';
 
 const SubSectionHeader = ({ isSubSecSkills, isSubSecTopics, isSubSecChallenges, isSubSecparticipants, SsName }) => {

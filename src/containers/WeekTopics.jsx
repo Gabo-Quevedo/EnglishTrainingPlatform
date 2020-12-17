@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import SubSectionHeader from '../components/SubSectionHeader';
 import WeekTopicsItem from '../components/WeekTopicsItem';
-import ChallengeRequest from '../components/ChallengeRequest';
+import TopicRequest from '../components/TopicRequest';
 
 const WeekChallenges = ({ topics }) => {
 
@@ -15,7 +15,7 @@ const WeekChallenges = ({ topics }) => {
           <WeekTopicsItem key={item.id} {...item} />
         ))
       )}
-      <ChallengeRequest />
+      <TopicRequest />
     </div>
 
   );
