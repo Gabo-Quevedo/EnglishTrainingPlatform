@@ -8,7 +8,7 @@ import ChallengeRequest from '../components/ChallengeRequest';
 const WeekChallenges = ({ topics }) => {
 
   return (
-    <div className='ss-main-container'>
+    <div className='ss-header-main-container'>
       <SubSectionHeader SsName='Topics' isSubSecTopics />
       {topics.length > 0 && (
         topics.map(item => (

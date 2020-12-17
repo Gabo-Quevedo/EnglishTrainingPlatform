@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Header from '../components/Header';
 import NextTopic from '../components/NextTopic';
 import WeeklyChallenge from '../components/WeeklyChallenge';
 import Participants from '../components/Participants';
@@ -13,7 +12,6 @@ import '../assets/styles/index.styl';
 
 const Home = ({ dynamics }) => (
   <>
-    <Header />
     <NextTopic />
     {dynamics.length > 0 && (
       <Dynamic>

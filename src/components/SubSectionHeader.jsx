@@ -7,12 +7,7 @@ import { logoutRequest } from '../actions';
 import TrenIcon from '../assets/static/tren-icon.svg';
 import '../assets/styles/components/SubSectionHeader.styl';
 
-const SubSectionHeader = (props) => {
-  const { user, isSubSecSkills, isSubSecTopics, isSubSecChallenges, isSubSecparticipants, SsName } = props;
-  const hasUser = Object.keys(user).length > 0;
-  const handleLogout = () => {
-    props.logoutRequest({});
-  };
+const SubSectionHeader = ({ isSubSecSkills, isSubSecTopics, isSubSecChallenges, isSubSecparticipants, SsName }) => {
 
   const headerClass = classNames('ss-header', {
     isSubSecSkills,
@@ -27,27 +22,6 @@ const SubSectionHeader = (props) => {
           <h1>My Weekly</h1>
           <h5>{SsName}</h5>
         </div>
-      </div>
-      <div className='header__menu'>
-        <div className='header__menu--profile'>
-          {
-            hasUser ?
-              <img src={gravatar(user.email)} alt={user.email} /> :
-              <img src={TrenIcon} alt='' />
-          }
-        </div>
-        <ul>
-          {hasUser ?
-            <li><Link to='/'>{user.name}</Link></li> :
-            null
-          }
-          {hasUser ? <li><Link to='/' onClick={handleLogout}>Cerrar Sesión</Link></li> : (
-            <li>
-              <Link to='/login'>Login</Link>
-            </li>
-          )}
-
-        </ul>
       </div>
     </header>
   );
