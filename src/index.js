@@ -48,20 +48,24 @@ const initialState = {
       'profile': ['user', 'admin', 'sudoAdmin'],
       'skills': [
         {
+          'title': 'listening',
           'id': 1,
-          'listening': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
         },
         {
+          'title': 'reading',
           'id': 2,
-          'reading': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
         },
         {
+          'title': 'writting',
           'id': 3,
-          'writting': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
         },
         {
+          'title': 'speaking',
           'id': 4,
-          'speaking': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
         },
       ],
       'topics': [
@@ -125,20 +129,24 @@ const initialState = {
       'profile': ['user', 'admin', 'sudoAdmin'],
       'skills': [
         {
+          'title': 'listening',
           'id': 1,
-          'listening': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
         },
         {
+          'title': 'reading',
           'id': 2,
-          'reading': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
         },
         {
+          'title': 'writting',
           'id': 3,
-          'writting': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
         },
         {
+          'title': 'speaking',
           'id': 4,
-          'speaking': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
         },
       ],
       'topics': [

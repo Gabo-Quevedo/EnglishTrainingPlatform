@@ -9,7 +9,7 @@ const NextTopic = ({ topicName }) => {
       <div className='next-topic-container'>
         <h1 className='next-topic--title'>Next Topic</h1>
         <h3 className='next-topic--current'>{topicName}</h3>
-        <Link to='/skills' className='next-topic--button'>Your Topic Poll</Link>
+        <Link to='/topics' className='next-topic--button'>Your Topic Poll</Link>
       </div>
     </section>
   );

@@ -3,19 +3,22 @@ import { connect } from 'react-redux';
 
 import SubSectionHeader from '../components/SubSectionHeader';
 import WeekSkillsItem from '../components/WeekSkillsItem';
-import TopicRequest from '../components/TopicRequest';
+
+import '../assets/styles/WeekSkills.styl';
 
 const WeekSkills = ({ skills }) => {
 
   return (
     <div className='ss-header-main-container'>
-      <SubSectionHeader SsName='Skills' isSubSecSkills />
-      {skills.length > 0 && (
-        skills.map(item => (
-          <WeekSkillsItem key={item.id} {...item} />
-        ))
-      )}
-      <TopicRequest />
+      <form action=''>
+        <SubSectionHeader SsName='Skills' isSubSecSkills />
+        {skills.length > 0 && (
+          skills.map(item => (
+            <WeekSkillsItem key={item.id} {...item} />
+          ))
+        )}
+        <button className='setSkills-btn' type='submit'>Save Skills</button>
+      </form>
     </div>
 
   );
