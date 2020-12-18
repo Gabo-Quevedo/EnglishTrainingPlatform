@@ -18,7 +18,7 @@ const reducer = (state, action) => {
     case 'ADD_CHALLENGE':
       return {
         ...state,
-        collapse: action.payload,
+        challenges: state.users[1].challenges[action.payload],
       };
     case 'COLLAPSE_CHALLENGE_FORM':
       return {
