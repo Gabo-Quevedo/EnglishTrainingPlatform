@@ -8,7 +8,7 @@ import App from './routes/App';
 const initialState = {
   'user': {},
   'collapse': [
-    { 'challengeReq': 'false' },
+    { 'challengeReq': 'true' },
     { 'topicReq': 'false' },
   ],
   'partners': [

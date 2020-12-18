@@ -6,12 +6,13 @@ import WeekChallengesItem from '../components/WeekChallengesItem';
 
 import '../assets/styles/WeekChallenges.styl';
 
-const WeekChallenges = ({ challenges, isCollapse }) => {
+const WeekChallenges = (props) => {
+  const { challenges, isCollapse } = props;
   const handleSubmit = (event) => {
     event.preventDefault();
   };
   const toogleCollapse = () => {
-    console.log(isCollapse);
+    props.collapseChallengeForm({ isCollapse: isCollapse[0] });
   };
   return (
     <div className='ss-header-main-container'>
@@ -24,7 +25,7 @@ const WeekChallenges = ({ challenges, isCollapse }) => {
       <div className='challengeRequest'>
         <div className='challengeRequest-container'>
           <button onClick={toogleCollapse} type='button'>New Challenge Request</button>
-          {isCollapse && (
+          {!isCollapse && (
             <div className='challengeRequest-formBody'>
               <form action=''>
                 <div className='challengeRequest-form-container'>

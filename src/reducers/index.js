@@ -18,12 +18,12 @@ const reducer = (state, action) => {
     case 'ADD_CHALLENGE':
       return {
         ...state,
-        challenges: [state.challenges, action.payload],
+        collapse: action.payload,
       };
     case 'COLLAPSE_CHALLENGE_FORM':
       return {
         ...state,
-        collapse: action.payload,
+        collapse: !action.payload,
       };
     default:
       return state;
