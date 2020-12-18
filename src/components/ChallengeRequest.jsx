@@ -1,14 +1,21 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { collapseChallengeForm } from '../actions';
+
 import '../assets/styles/components/ChallengeRequest.styl';
 
-const ChallengeRequest = () => {
-  const collapse = false;
+const ChallengeRequest = ({ isCollapse }) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+  const toogleCollapse = () => {
+    !isCollapse ? isCollapse : !isCollapse;
+  };
   return (
     <div className='challengeRequest'>
       <div className='challengeRequest-container'>
-        <button type='button'>New Challenge Request</button>
-        {collapse && (
+        <button onClick={toogleCollapse} type='button'>New Challenge Request</button>
+        {isCollapse && (
           <div className='challengeRequest-formBody'>
             <form action=''>
               <div className='challengeRequest-form-container'>
@@ -31,7 +38,7 @@ const ChallengeRequest = () => {
                   Description
                   <textarea id='ch-description' type='text' />
                 </label>
-                <input className='submit-button' type='submit' value='Send Request' />
+                <input className='submit-button' onClick={handleSubmit} type='submit' value='Send Request' />
               </div>
             </form>
           </div>
@@ -40,5 +47,12 @@ const ChallengeRequest = () => {
     </div>
   );
 };
+const mapStateToProps = {
+  isCollapse: state.collapse[0],
+};
 
-export default ChallengeRequest;
+const mapDispatchToProps = {
+  collapseChallengeForm,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ChallengeRequest);

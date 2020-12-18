@@ -7,6 +7,10 @@ import App from './routes/App';
 
 const initialState = {
   'user': {},
+  'collapse': [
+    { 'challengeReq': 'false' },
+    { 'topicReq': 'false' },
+  ],
   'partners': [
     { 'id': 1, 'name': 'Gabo', 'lastName': 'Last Name' },
     { 'id': 2, 'name': 'Sandra', 'lastName': 'Last Name' },

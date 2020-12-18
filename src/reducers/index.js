@@ -15,6 +15,16 @@ const reducer = (state, action) => {
         ...state,
         user: action.payload,
       };
+    case 'ADD_CHALLENGE':
+      return {
+        ...state,
+        challenges: [state.challenges, action.payload],
+      };
+    case 'COLLAPSE_CHALLENGE_FORM':
+      return {
+        ...state,
+        collapse: action.payload,
+      };
     default:
       return state;
   }
