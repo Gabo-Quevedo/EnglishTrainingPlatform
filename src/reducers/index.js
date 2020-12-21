@@ -23,7 +23,7 @@ const reducer = (state, action) => {
     case 'COLLAPSE_CHALLENGE_FORM':
       return {
         ...state,
-        collapse: !action.payload,
+        collapse: action.payload,
       };
     default:
       return state;
