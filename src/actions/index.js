@@ -1,9 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-export const collapseChallengeForm = payload => ({
-  type: 'COLLAPSE_CHALLENGE_FORM',
-  payload,
-});
-
 export const addChallenge = payload => ({
   type: 'ADD_CHALLENGE',
   payload,
