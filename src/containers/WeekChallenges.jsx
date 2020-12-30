@@ -17,7 +17,6 @@ const WeekChallenges = (props) => {
   const [collapse, setCollapse] = useState(true);
 
   const toogleCollapse = () => {
-    console.log(collapse);
     setCollapse(!collapse);
   };
   const handleInput = (event) => {

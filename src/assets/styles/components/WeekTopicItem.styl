@@ -26,3 +26,80 @@
       display inline-block
       right 20px
       bottom 10px
+
+.topicRequest
+  width 100%
+  &-container
+    button:hover
+      background train-yellow-hover
+    button
+      width 100%
+      background-color train-yellow
+      height 50px
+      font-size 1.8rem
+      font-weight 300
+      color soft-black
+      border 0
+      cursor pointer
+  &-form-container
+    display flex
+    justify-content center
+    align-items  center
+    flex-direction column
+    width 100%
+    padding 25px 0
+    background-color bold-black
+    label 
+      display flex
+      flex-direction column
+      width 90%
+      padding 5px
+      text-align center
+      font-size 1.9rem
+      input
+        font-size 1.9rem
+        padding 10px 20px
+        border-radius 18px
+        color soft-gray
+        border 0
+        margin 10px 0 17px 0
+        outline none
+        width 100%
+      select
+        font-size 1.9rem
+        padding 10px 20px
+        border-radius 18px
+        color soft-gray
+        border 0
+        margin 10px 0 17px 0
+        outline none
+        width 100%
+      textarea
+        font-size 1.9rem
+        padding 10px 20px
+        border-radius 18px
+        color soft-gray
+        border 0
+        margin 10px 0 17px 0
+        outline none
+        width 100%
+.submit-button
+  display inline-block
+  width: 150px
+  font-size: 1.5rem
+  text-decoration none
+  padding 10px
+  font-weight 500
+  cursor pointer
+  background-color train-yellow
+  color soft-black
+  margin-top 10px
+  text-align center
+  letter-spacing: 1px
+  border-radius 25px
+  border 1px solid train-yellow
+  transition background-color .5s, color .5s
+.topicRequest-formBody
+  // display none
+.submit-button:hover
+  background-color train-yellow-hover
