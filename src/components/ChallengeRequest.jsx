@@ -1,16 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { collapseChallengeForm } from '../actions';
 
-import '../assets/styles/components/ChallengeRequest.styl';
-
-const ChallengeRequest = ({ isCollapse }) => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-  const toogleCollapse = () => {
-    !isCollapse ? isCollapse : !isCollapse;
-  };
+const ChallengeRequest = () => {
   return (
     <div className='challengeRequest'>
       <div className='challengeRequest-container'>
@@ -47,12 +37,5 @@ const ChallengeRequest = ({ isCollapse }) => {
     </div>
   );
 };
-const mapStateToProps = {
-  isCollapse: state.collapse[0],
-};
 
-const mapDispatchToProps = {
-  collapseChallengeForm,
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(ChallengeRequest);
+export default ChallengeRequest;

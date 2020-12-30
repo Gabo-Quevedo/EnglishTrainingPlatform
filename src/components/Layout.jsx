@@ -1,13 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = ({ children }) => (
+const Layout = ({ children, user }) => (
   <div className='App'>
-    <Header />
+    <Header {...user} />
     {children}
     <Footer />
   </div>
 );
 
-export default Layout;
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+  };
+};
+
+export default connect(mapStateToProps, null)(Layout);
