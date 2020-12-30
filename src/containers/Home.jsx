@@ -10,9 +10,9 @@ import Requested from '../components/Requested';
 import ManualRelease from '../components/ManualRelease';
 import '../assets/styles/index.styl';
 
-const Home = ({ dynamics }) => (
+const Home = ({ dynamics, topicName }) => (
   <>
-    <NextTopic />
+    <NextTopic topicName={topicName} />
     {dynamics.length > 0 && (
       <Dynamic>
         {dynamics.map(item => (
@@ -36,6 +36,7 @@ const Home = ({ dynamics }) => (
 const mapStateToProps = (state) => {
   return {
     dynamics: state.dynamics,
+    topicName: state.topicName,
   };
 };
 

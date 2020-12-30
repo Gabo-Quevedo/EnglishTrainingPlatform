@@ -1,5 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/NextTopic.styl';
 
@@ -15,10 +14,4 @@ const NextTopic = ({ topicName }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    topicName: state.topicName,
-  };
-};
-
-export default connect(mapStateToProps, null)(NextTopic);
+export default NextTopic;
