@@ -6,11 +6,87 @@ import reducer from './reducers';
 import App from './routes/App';
 
 const initialState = {
-  'user': {},
-  'collapse': [
-    { 'challengeReq': 'true' },
-    { 'topicReq': 'false' },
-  ],
+  'user': {
+    'id': 2,
+    'name': 'Sandra',
+    'lastName': 'Rojas',
+    'email': 'sandrita@gmail.com',
+    'country': 'Colombia',
+    'gender': 'female',
+    'enable': 'true',
+    'profile': ['user', 'admin', 'sudoAdmin'],
+    'skills': [
+      {
+        'title': 'listening',
+        'id': 1,
+        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+      },
+      {
+        'title': 'reading',
+        'id': 2,
+        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+      },
+      {
+        'title': 'writting',
+        'id': 3,
+        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+      },
+      {
+        'title': 'speaking',
+        'id': 4,
+        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+      },
+    ],
+    'topics': [
+      {
+        'id': 1,
+        'title': 'Games',
+        'description': 'Games description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+      {
+        'id': 2,
+        'title': 'Dance',
+        'description': 'Dance description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+      {
+        'id': 3,
+        'title': 'Work',
+        'description': 'Work description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+    ],
+    'challenges': [
+    ],
+  },
   'partners': [
     { 'id': 1, 'name': 'Gabo', 'lastName': 'Last Name' },
     { 'id': 2, 'name': 'Sandra', 'lastName': 'Last Name' },
@@ -20,12 +96,6 @@ const initialState = {
     { 'id': 6, 'name': 'Robert', 'lastName': 'Last Name' },
   ],
   'topicName': 'Topic Name',
-  'ssList': {
-    'skills': 'false',
-    'topics': 'false',
-    'challenges': 'false',
-    'partners': 'false',
-  },
   'dynamics': [
     {
       'id': 1,
@@ -46,218 +116,6 @@ const initialState = {
       'id': 4,
       'title': 'Breakout Session',
       'description': 'We finished our Session about 2 hours together, next to that you can feel free to speak in "Spanglish" orjust Spanish. This is our extra-time and is a good oportunitie to relaxing tegether',
-    },
-  ],
-  'users': [
-    {
-      'id': 1,
-      'name': 'Gabo',
-      'lastName': 'Quevedo',
-      'email': 'gabriel@gmail.com',
-      'country': 'Chile',
-      'gender': 'male',
-      'enable': 'true',
-      'profile': ['user', 'admin', 'sudoAdmin'],
-      'skills': [
-        {
-          'title': 'listening',
-          'id': 1,
-          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        },
-        {
-          'title': 'reading',
-          'id': 2,
-          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        },
-        {
-          'title': 'writting',
-          'id': 3,
-          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        },
-        {
-          'title': 'speaking',
-          'id': 4,
-          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        },
-      ],
-      'topics': [
-        {
-          'id': 1,
-          'title': 'Games',
-          'description': 'Games description',
-          'situation': {
-            'enable': 'true',
-            'request': {
-              'inQue': 'true',
-              'accepted': 'false',
-              'rejected': 'false',
-              'deleted': 'false',
-              'done': 'false',
-            },
-          },
-        },
-        {
-          'id': 2,
-          'title': 'Dance',
-          'description': 'Dance description',
-          'situation': {
-            'enable': 'true',
-            'request': {
-              'inQue': 'true',
-              'accepted': 'false',
-              'rejected': 'false',
-              'deleted': 'false',
-              'done': 'false',
-            },
-          },
-        },
-        {
-          'id': 3,
-          'title': 'Work',
-          'description': 'Work description',
-          'situation': {
-            'enable': 'true',
-            'request': {
-              'inQue': 'true',
-              'accepted': 'false',
-              'rejected': 'false',
-              'deleted': 'false',
-              'done': 'false',
-            },
-          },
-        },
-      ],
-      'challenges': [
-      ],
-    },
-    {
-      'id': 2,
-      'name': 'Sandra',
-      'lastName': 'Rojas',
-      'email': 'sandrita@gmail.com',
-      'country': 'Colombia',
-      'gender': 'female',
-      'enable': 'true',
-      'profile': ['user', 'admin', 'sudoAdmin'],
-      'skills': [
-        {
-          'title': 'listening',
-          'id': 1,
-          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        },
-        {
-          'title': 'reading',
-          'id': 2,
-          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        },
-        {
-          'title': 'writting',
-          'id': 3,
-          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        },
-        {
-          'title': 'speaking',
-          'id': 4,
-          'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-        },
-      ],
-      'topics': [
-        {
-          'id': 1,
-          'title': 'Games',
-          'description': 'Games description',
-          'situation': {
-            'enable': 'true',
-            'request': {
-              'inQue': 'true',
-              'accepted': 'false',
-              'rejected': 'false',
-              'deleted': 'false',
-              'done': 'false',
-            },
-          },
-        },
-        {
-          'id': 2,
-          'title': 'Dance',
-          'description': 'Dance description',
-          'situation': {
-            'enable': 'true',
-            'request': {
-              'inQue': 'true',
-              'accepted': 'false',
-              'rejected': 'false',
-              'deleted': 'false',
-              'done': 'false',
-            },
-          },
-        },
-        {
-          'id': 3,
-          'title': 'Work',
-          'description': 'Work description',
-          'situation': {
-            'enable': 'true',
-            'request': {
-              'inQue': 'true',
-              'accepted': 'false',
-              'rejected': 'false',
-              'deleted': 'false',
-              'done': 'false',
-            },
-          },
-        },
-      ],
-      'challenges': [
-        {
-          'id': 1,
-          'title': 'My Family',
-          'minutes': 8,
-          'description': 'My Family description',
-          'situation': {
-            'enable': 'true',
-            'request': {
-              'inQue': 'true',
-              'accepted': 'false',
-              'rejected': 'false',
-              'deleted': 'false',
-              'done': 'false',
-            },
-          },
-        },
-        {
-          'id': 2,
-          'title': 'My Food',
-          'minutes': 7,
-          'description': 'My Food description',
-          'situation': {
-            'enable': 'true',
-            'request': {
-              'inQue': 'true',
-              'accepted': 'false',
-              'rejected': 'false',
-              'deleted': 'false',
-              'done': 'false',
-            },
-          },
-        },
-        {
-          'id': 3,
-          'title': 'My Hobbies',
-          'minutes': 5,
-          'description': 'My Hobbies s description',
-          'situation': {
-            'enable': 'true',
-            'request': {
-              'inQue': 'true',
-              'accepted': 'false',
-              'rejected': 'false',
-              'deleted': 'false',
-              'done': 'false',
-            },
-          },
-        },
-      ],
     },
   ],
 };

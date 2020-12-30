@@ -64,7 +64,7 @@ const WeekChallenges = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    topics: state.users[0].topics,
+    topics: state.user.topics,
   };
 };
 

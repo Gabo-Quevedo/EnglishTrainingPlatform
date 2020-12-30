@@ -80,7 +80,7 @@ const WeekChallenges = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    challenges: state.users[1].challenges,
+    challenges: state.user.challenges,
     isCollapse: state.collapse,
   };
 };

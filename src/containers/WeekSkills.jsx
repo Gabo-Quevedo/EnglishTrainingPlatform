@@ -26,7 +26,7 @@ const WeekSkills = ({ skills }) => {
 
 const mapStateToProps = (state) => {
   return {
-    skills: state.users[0].skills,
+    skills: state.user.skills,
   };
 };
 
