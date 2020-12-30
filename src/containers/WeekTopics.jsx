@@ -3,11 +3,12 @@ import { connect } from 'react-redux';
 
 import SubSectionHeader from '../components/SubSectionHeader';
 import WeekTopicsItem from '../components/WeekTopicsItem';
+import '../assets/styles/WeekTopics.styl';
 
 const WeekChallenges = (props) => {
   const { topics } = props;
 
-  const [collapse, setCollapse] = useState(true);
+  const [collapse, setCollapse] = useState(false);
 
   const toogleCollapse = () => {
     setCollapse(!collapse);
@@ -34,6 +35,11 @@ const WeekChallenges = (props) => {
         topics.map(item => (
           <WeekTopicsItem key={item.id} {...item} />
         ))
+      )}
+      {!topics.length && (
+        <div className='topicAdvise-container'>
+          <h1>You have not propose any Topic Yet</h1>
+        </div>
       )}
       <div className='topicRequest'>
         <div className='topicRequest-container'>

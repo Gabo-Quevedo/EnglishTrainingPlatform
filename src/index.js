@@ -85,6 +85,54 @@ const initialState = {
       },
     ],
     'challenges': [
+      {
+        'id': 1,
+        'title': 'My Family',
+        'minutes': 8,
+        'description': 'My Family description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+      {
+        'id': 2,
+        'title': 'My Food',
+        'minutes': 7,
+        'description': 'My Food description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+      {
+        'id': 3,
+        'title': 'My Hobbies',
+        'minutes': 5,
+        'description': 'My Hobbies s description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
     ],
   },
   'partners': [

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { addChallenge } from '../actions';
+
 import SubSectionHeader from '../components/SubSectionHeader';
 import WeekChallengesItem from '../components/WeekChallengesItem';
 
@@ -14,7 +15,7 @@ const WeekChallenges = (props) => {
     description: '',
   });
 
-  const [collapse, setCollapse] = useState(true);
+  const [collapse, setCollapse] = useState(false);
 
   const toogleCollapse = () => {
     setCollapse(!collapse);
@@ -40,6 +41,11 @@ const WeekChallenges = (props) => {
         challenges.map(item => (
           <WeekChallengesItem key={item.id} {...item} />
         ))
+      )}
+      {!challenges.length && (
+        <div className='challengeAdvise-container'>
+          <h1>You have not done any Challenge Yet</h1>
+        </div>
       )}
       <div className='challengeRequest'>
         <div className='challengeRequest-container'>
