@@ -9,6 +9,131 @@ import '../assets/styles/components/Login.styl';
 const Login = (props) => {
   const [form, setValues] = useState({
     email: '',
+    name: 'Sandra',
+    lastName: 'Rojas',
+    country: 'Colombia',
+    gender: 'female',
+    enable: 'true',
+    profile: ['user', 'admin', 'sudoAdmin'],
+    skills: [
+      {
+        'title': 'listening',
+        'id': 1,
+        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+      },
+      {
+        'title': 'reading',
+        'id': 2,
+        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+      },
+      {
+        'title': 'writting',
+        'id': 3,
+        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+      },
+      {
+        'title': 'speaking',
+        'id': 4,
+        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+      },
+    ],
+    'topics': [
+      {
+        'id': 1,
+        'title': 'Games',
+        'description': 'Games description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+      {
+        'id': 2,
+        'title': 'Dance',
+        'description': 'Dance description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+      {
+        'id': 3,
+        'title': 'Work',
+        'description': 'Work description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+    ],
+    'challenges': [
+      {
+        'id': 1,
+        'title': 'My Family',
+        'minutes': 8,
+        'description': 'My Family description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+      {
+        'id': 2,
+        'title': 'My Food',
+        'minutes': 7,
+        'description': 'My Food description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+      {
+        'id': 3,
+        'title': 'My Hobbies',
+        'minutes': 5,
+        'description': 'My Hobbies s description',
+        'situation': {
+          'enable': 'true',
+          'request': {
+            'inQue': 'true',
+            'accepted': 'false',
+            'rejected': 'false',
+            'deleted': 'false',
+            'done': 'false',
+          },
+        },
+      },
+    ],
   });
 
   const handleInput = (event) => {
