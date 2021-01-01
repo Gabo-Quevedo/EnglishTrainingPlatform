@@ -9,11 +9,21 @@ import '../assets/styles/WeekChallenges.styl';
 
 const WeekChallenges = (props) => {
   const { challenges } = props;
+
   const [form, setValues] = useState({
     title: '',
     minutes: 0,
     description: '',
   });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.addChallenge(form);
+    console.log({
+      challenges: { form },
+    });
+    console.log(challenges);
+  };
 
   const [collapse, setCollapse] = useState(false);
 
@@ -25,13 +35,6 @@ const WeekChallenges = (props) => {
       ...form,
       [event.target.name]: event.target.value,
     });
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    props.addChallenge(form);
-    console.log(form);
-    console.log(challenges);
   };
 
   return (
@@ -72,7 +75,7 @@ const WeekChallenges = (props) => {
                     Description
                     <textarea onChange={handleInput} name='description' id='description' type='text' />
                   </label>
-                  <input className='submit-button' onClick={handleSubmit} type='submit' value='Send Request' />
+                  <input className='submit-button' type='submit' value='Send Request' />
                 </div>
               </form>
             </div>
