@@ -5,9 +5,9 @@ import '../assets/styles/components/WeekChallengesItem.styl';
 import '../assets/styles/icons.styl';
 
 const WeekChallengesItem = (props) => {
-  const { title, minutes, description, situation } = props;
+  const { id, title, minutes, description, situation } = props;
   return (
-    <section className='week-challenges-item'>
+    <section key={id} className='week-challenges-item'>
       <div className='week-challenges-item-container'>
         <div className='week-challenges-item-container__title'>
           <h2>{title}</h2>

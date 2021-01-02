@@ -11,9 +11,20 @@ const WeekChallenges = (props) => {
   const { challenges } = props;
 
   const [form, setValues] = useState({
+    id: challenges.id + 1,
     title: '',
     minutes: 0,
     description: '',
+    situation: {
+      enable: 'true',
+      request: [
+        'inQue',
+        'accepted',
+        'rejected',
+        'deleted',
+        'done',
+      ],
+    },
   });
 
   const handleSubmit = (event) => {

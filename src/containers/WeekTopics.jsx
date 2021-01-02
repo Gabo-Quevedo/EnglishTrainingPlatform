@@ -5,12 +5,12 @@ import SubSectionHeader from '../components/SubSectionHeader';
 import WeekTopicsItem from '../components/WeekTopicsItem';
 import '../assets/styles/WeekTopics.styl';
 
-const WeekChallenges = (props) => {
-  const { topics } = props;
+const WeekChallenges = ({ topics }) => {
 
   const [collapse, setCollapse] = useState(false);
 
   const toogleCollapse = () => {
+    console.log(topics);
     setCollapse(!collapse);
   };
 
