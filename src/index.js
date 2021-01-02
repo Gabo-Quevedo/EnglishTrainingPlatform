@@ -44,13 +44,13 @@ const initialState = {
         'description': 'Games description',
         'situation': {
           'enable': 'true',
-          'request': {
-            'inQue': 'true',
-            'accepted': 'false',
-            'rejected': 'false',
-            'deleted': 'false',
-            'done': 'false',
-          },
+          'request': [
+            'inQue',
+            'accepted',
+            'rejected',
+            'deleted',
+            'done',
+          ],
         },
       },
       {
@@ -59,13 +59,13 @@ const initialState = {
         'description': 'Dance description',
         'situation': {
           'enable': 'true',
-          'request': {
-            'inQue': 'true',
-            'accepted': 'false',
-            'rejected': 'false',
-            'deleted': 'false',
-            'done': 'false',
-          },
+          'request': [
+            'inQue',
+            'accepted',
+            'rejected',
+            'deleted',
+            'done',
+          ],
         },
       },
       {
@@ -74,13 +74,13 @@ const initialState = {
         'description': 'Work description',
         'situation': {
           'enable': 'true',
-          'request': {
-            'inQue': 'true',
-            'accepted': 'false',
-            'rejected': 'false',
-            'deleted': 'false',
-            'done': 'false',
-          },
+          'request': [
+            'inQue',
+            'accepted',
+            'rejected',
+            'deleted',
+            'done',
+          ],
         },
       },
     ],
@@ -92,13 +92,13 @@ const initialState = {
         'description': 'My Family description',
         'situation': {
           'enable': 'true',
-          'request': {
-            'inQue': 'true',
-            'accepted': 'false',
-            'rejected': 'false',
-            'deleted': 'false',
-            'done': 'false',
-          },
+          'request': [
+            'inQue',
+            'accepted',
+            'rejected',
+            'deleted',
+            'done',
+          ],
         },
       },
       {
@@ -108,13 +108,13 @@ const initialState = {
         'description': 'My Food description',
         'situation': {
           'enable': 'true',
-          'request': {
-            'inQue': 'true',
-            'accepted': 'false',
-            'rejected': 'false',
-            'deleted': 'false',
-            'done': 'false',
-          },
+          'request': [
+            'inQue',
+            'accepted',
+            'rejected',
+            'deleted',
+            'done',
+          ],
         },
       },
       {
@@ -124,13 +124,13 @@ const initialState = {
         'description': 'My Hobbies s description',
         'situation': {
           'enable': 'true',
-          'request': {
-            'inQue': 'true',
-            'accepted': 'false',
-            'rejected': 'false',
-            'deleted': 'false',
-            'done': 'false',
-          },
+          'request': [
+            'inQue',
+            'accepted',
+            'rejected',
+            'deleted',
+            'done',
+          ],
         },
       },
     ],
