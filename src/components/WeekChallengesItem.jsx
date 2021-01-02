@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/WeekChallengesItem.styl';
+import '../assets/styles/icons.styl';
 
 const WeekChallengesItem = ({ title, minutes, description }) => (
   <section className='week-challenges-item'>
@@ -10,7 +11,7 @@ const WeekChallengesItem = ({ title, minutes, description }) => (
       <p>
         {description}
       </p>
-      <Link to='/'>i</Link>
+      <Link to='/'><div className='trash_icon' /></Link>
     </div>
   </section>
 );
