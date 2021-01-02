@@ -7,21 +7,37 @@
   width 100%
   background-color soft-green
   &-container
-    position relative
+    display flex
+    flex-direction column
+    height 100%
     width 100%
-    min-height 110px
+    min-height 130px
     padding 20px
-    h2
-      font-weight 400
-      font-size 3rem
-      color soft-black
-    p
-      padding-top 5px
-      font-size 1.6rem
-      line-height 2.6rem
-      letter-spacing .2rem
-    a
-      position absolute
-      display inline-block
-      right 27px
-      bottom 30px
+  &-container__title
+    display flex
+    justify-content space-between
+    align-items center
+    width 100%
+  &-container__title-time
+    display flex
+    align-items center
+  h2
+    font-weight 400
+    font-size 3rem
+    color soft-black
+  span
+    padding 0 2px
+    font-size 1.8rem
+  &-container__statusAction
+      display flex
+      justify-content space-between
+      padding-top 15px
+      align-items center
+    span
+      font-size 1.3rem
+      color black
+  p
+    padding-top 5px
+    font-size 1.6rem
+    line-height 2.6rem
+    letter-spacing .2rem
