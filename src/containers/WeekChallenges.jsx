@@ -12,6 +12,10 @@ const WeekChallenges = (props) => {
   const [collapse, setCollapse] = useState(false);
   const inputRef = useRef(null);
 
+  const toogleCollapse = () => {
+    setCollapse(prevCollapse => !prevCollapse);
+  };
+
   const [form, setValues] = useState({
     id: challenges.id + 1,
     title: '',
@@ -29,16 +33,10 @@ const WeekChallenges = (props) => {
     },
   });
 
-  const toogleCollapse = () => {
-    setCollapse(!collapse);
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     props.addChallenge(form);
-    console.log({
-      challenges: { form },
-    });
+    setCollapse(prevCollapse => !prevCollapse);
   };
 
   const handleInput = (event) => {
