@@ -1,21 +1,23 @@
+import { ADD_CHALLENGE, DELETE_CHALLENGE, LOGIN_REQUEST, LOGOUT_REQUEST, REGISTER_REQUEST } from '../types';
+
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'LOGIN_REQUEST':
+    case LOGIN_REQUEST:
       return {
         ...state,
         user: action.payload,
       };
-    case 'LOGOUT_REQUEST':
+    case LOGOUT_REQUEST:
       return {
         ...state,
         user: action.payload,
       };
-    case 'REGISTER_REQUEST':
+    case REGISTER_REQUEST:
       return {
         ...state,
         user: action.payload,
       };
-    case 'ADD_CHALLENGE':
+    case ADD_CHALLENGE:
       return {
         ...state,
         user: {
@@ -23,11 +25,8 @@ const reducer = (state, action) => {
           challenges: [...state.user.challenges, action.payload],
         },
       };
-    case 'COLLAPSE_CHALLENGE_FORM':
-      return {
-        ...state,
-        collapse: action.payload,
-      };
+    case DELETE_CHALLENGE:
+      return; //por definir;
     default:
       return state;
   }
