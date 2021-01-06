@@ -1,4 +1,4 @@
-import { ADD_CHALLENGE, DELETE_CHALLENGE, LOGIN_REQUEST, LOGOUT_REQUEST, REGISTER_REQUEST } from '../types';
+import { ADD_CHALLENGE, ADD_TOPIC, DELETE_CHALLENGE, DELETE_TOPIC, LOGIN_REQUEST, LOGOUT_REQUEST, REGISTER_REQUEST } from '../types';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -26,7 +26,13 @@ const reducer = (state, action) => {
         },
       };
     case DELETE_CHALLENGE:
-      return; //por definir;
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          challenges: [...state.user.challenges.filter(item => item.id !== action.payload)],
+        },
+      };
     default:
       return state;
   }

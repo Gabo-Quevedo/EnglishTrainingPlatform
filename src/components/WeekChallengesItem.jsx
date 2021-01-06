@@ -5,7 +5,7 @@ import '../assets/styles/components/WeekChallengesItem.styl';
 import '../assets/styles/icons.styl';
 
 const WeekChallengesItem = (props) => {
-  const { id, title, minutes, description, situation } = props;
+  const { id, title, minutes, description, situation, handleTrashIcon } = props;
   return (
     <section key={id} className='week-challenges-item'>
       <div className='week-challenges-item-container'>
@@ -23,7 +23,7 @@ const WeekChallengesItem = (props) => {
         </p>
         <div className='week-challenges-item-container__statusAction'>
           <span>{situation.request[0]}</span>
-          <Link to='/'><div className='trash_icon' /></Link>
+          <Link to='challenges' onClick={() => handleTrashIcon(id)}><div className='trash_icon' /></Link>
         </div>
       </div>
     </section>

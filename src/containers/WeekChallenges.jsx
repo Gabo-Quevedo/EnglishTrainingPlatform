@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { connect } from 'react-redux';
-import { addChallenge } from '../actions';
+import { addChallenge, deleteChallenge } from '../actions';
 
 import SubSectionHeader from '../components/SubSectionHeader';
 import WeekChallengesItem from '../components/WeekChallengesItem';
@@ -9,6 +9,8 @@ import '../assets/styles/WeekChallenges.styl';
 
 const WeekChallenges = (props) => {
   const { challenges } = props;
+  const [collapse, setCollapse] = useState(false);
+  const inputRef = useRef(null);
 
   const [form, setValues] = useState({
     id: challenges.id + 1,
@@ -27,25 +29,27 @@ const WeekChallenges = (props) => {
     },
   });
 
+  const toogleCollapse = () => {
+    setCollapse(!collapse);
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     props.addChallenge(form);
     console.log({
       challenges: { form },
     });
-    console.log(challenges);
   };
 
-  const [collapse, setCollapse] = useState(false);
-
-  const toogleCollapse = () => {
-    setCollapse(!collapse);
-  };
   const handleInput = (event) => {
     setValues({
       ...form,
       [event.target.name]: event.target.value,
     });
+  };
+  const handleTrashIcon = (id) => {
+    console.log(id);
+    props.deleteChallenge(id);
   };
 
   return (
@@ -53,7 +57,7 @@ const WeekChallenges = (props) => {
       <SubSectionHeader SsName='Challenges' isSubSecChallenges />
       {challenges.length > 0 && (
         challenges.map(item => (
-          <WeekChallengesItem key={item.id} {...item} />
+          <WeekChallengesItem handleTrashIcon={handleTrashIcon} key={item.id} {...item} />
         ))
       )}
       {!challenges.length && (
@@ -70,7 +74,7 @@ const WeekChallenges = (props) => {
                 <div className='challengeRequest-form-container'>
                   <label htmlFor='title'>
                     Title
-                    <input onChange={handleInput} name='title' id='title' type='text' />
+                    <input ref={inputRef} onChange={handleInput} name='title' id='title' type='text' />
                   </label>
                   <label htmlFor='minutes'>
                     Estimated Minutes Minutes
@@ -84,9 +88,9 @@ const WeekChallenges = (props) => {
                   </label>
                   <label htmlFor='description'>
                     Description
-                    <textarea onChange={handleInput} name='description' id='description' type='text' />
+                    <textarea ref={inputRef} onChange={handleInput} name='description' id='description' type='text' />
                   </label>
-                  <input className='submit-button' type='submit' value='Send Request' />
+                  <input ref={inputRef} className='submit-button' type='submit' value='Send Request' />
                 </div>
               </form>
             </div>
@@ -94,7 +98,6 @@ const WeekChallenges = (props) => {
         </div>
       </div>
     </div>
-
   );
 };
 
@@ -107,6 +110,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = {
   addChallenge,
+  deleteChallenge,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(WeekChallenges);
