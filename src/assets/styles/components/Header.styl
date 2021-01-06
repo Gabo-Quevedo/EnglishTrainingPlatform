@@ -1,6 +1,5 @@
 @import '../_variables.styl'
 
-
 .header
   position relative
   display flex
@@ -10,8 +9,7 @@
   height 240px
   text-align center
   background linear-gradient(216deg, rgba(104,104,104,1) 0%, rgba(25,25,25,1) 100%)
-
-  .header--timeleft-container
+  &--timeleft-container
     display flex
     flex-direction column
     justify-content space-around
@@ -29,34 +27,37 @@
       font-size 1.9rem
       font-weight 300
       letter-spacing 2.5px
-
-
-
-.header__menu
-  position absolute
-  top 35px
-  li
-    margin 10px 0px
-    a:hover
-      color: white
-  ul
-    list-style none
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;    
-  ul:hover
+  &__img  
+    margin-left 30px
+    width 200px
+  &__menu
+    position absolute
+    right 10px
+    top 25px
+    ul
+      list-style none
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+    li
+      margin 10px 0px
+      font-size 1.2rem
+      a
+        color soft-white
+        text-decoration none
+      a:hover
+        color train-yellow-hover
+        text-decoration none
+      opacity 1
+  &__menu:hover ul
     visibility visible
     opacity 1
-  &:hover ul
-    visibility visible
-    opacity 1
-
-.header__img
-  margin-left 30px
-  width 200px
-
-.header__menu--profile
-  img
-    width 40px
-    object-fit cover
-    border-radius 100%
+  &__menu--profile
+    text-align right 
+    img
+      width 40px
+      object-fit cover
+      border-radius 100%
+  // &:hover ul
+  //   visibility visible
+  //   opacity 1
