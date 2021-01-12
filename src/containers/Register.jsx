@@ -1,26 +1,21 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { registerRequest } from '../actions';
 import '../assets/styles/components/Register.styl';
 
 const Register = (props) => {
-  const [form, setValues] = useState({
-    email: '',
-    name: '',
-    password: '',
-  });
-
-  const handleInput = (event) => {
-    setValues({
-      ...form,
-      [event.target.name]: event.target.value,
-    });
-  };
+  const form = useRef(null);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.registerRequest(form);
+    const formData = new FormData(form.current);
+    const registerData = {
+      email: formData.get('email'),
+      name: formData.get('name'),
+      password: formData.get('password'),
+    };
+    props.registerRequest(registerData);
     props.history.push('/');
   };
 
@@ -35,21 +30,18 @@ const Register = (props) => {
               className='input'
               type='text'
               placeholder='Nombre'
-              onChange={handleInput}
             />
             <input
               name='email'
               className='input'
               type='text'
               placeholder='Correo'
-              onChange={handleInput}
             />
             <input
               name='password'
               className='input'
               type='password'
               placeholder='Contraseña'
-              onChange={handleInput}
             />
             <button type='submit' className='button'>Registrarme</button>
           </form>

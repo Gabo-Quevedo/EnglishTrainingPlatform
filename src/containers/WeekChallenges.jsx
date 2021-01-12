@@ -10,41 +10,35 @@ import '../assets/styles/WeekChallenges.styl';
 const WeekChallenges = (props) => {
   const { challenges } = props;
   const [collapse, setCollapse] = useState(false);
-  const inputRef = useRef(null);
+  const form = useRef(null);
 
   const toogleCollapse = () => {
     setCollapse(prevCollapse => !prevCollapse);
   };
 
-  const [form, setValues] = useState({
-    id: challenges.id + 1,
-    title: '',
-    minutes: 0,
-    description: '',
-    situation: {
-      enable: 'true',
-      request: [
-        'inQue',
-        'accepted',
-        'rejected',
-        'deleted',
-        'done',
-      ],
-    },
-  });
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.addChallenge(form);
+    const formData = new FormData(form.current);
+    const challengeData = {
+      id: 10,
+      title: formData.get('title'),
+      minutes: formData.get('minutes'),
+      description: formData.get('description'),
+      situation: {
+        enable: 'true',
+        request: [
+          'inQue',
+          'accepted',
+          'rejected',
+          'deleted',
+          'done',
+        ],
+      },
+    };
+    props.addChallenge(challengeData);
     setCollapse(prevCollapse => !prevCollapse);
   };
 
-  const handleInput = (event) => {
-    setValues({
-      ...form,
-      [event.target.name]: event.target.value,
-    });
-  };
   const handleTrashIcon = (id) => {
     console.log(id);
     props.deleteChallenge(id);
@@ -68,15 +62,15 @@ const WeekChallenges = (props) => {
           <button onClick={toogleCollapse} type='button'>New Chalenge Request</button>
           {collapse && (
             <div className='challengeRequest-formBody'>
-              <form onSubmit={handleSubmit}>
+              <form ref={form} onSubmit={handleSubmit}>
                 <div className='challengeRequest-form-container'>
                   <label htmlFor='title'>
                     Title
-                    <input ref={inputRef} onChange={handleInput} name='title' id='title' type='text' />
+                    <input name='title' id='title' type='text' />
                   </label>
                   <label htmlFor='minutes'>
                     Estimated Minutes Minutes
-                    <select onChange={handleInput} name='minutes' id='minutes'>
+                    <select name='minutes' id='minutes'>
                       <option value='0'>Select</option>
                       <option value='7'>7</option>
                       <option value='10'>10</option>
@@ -86,9 +80,9 @@ const WeekChallenges = (props) => {
                   </label>
                   <label htmlFor='description'>
                     Description
-                    <textarea ref={inputRef} onChange={handleInput} name='description' id='description' type='text' />
+                    <textarea name='description' id='description' type='text' />
                   </label>
-                  <input ref={inputRef} className='submit-button' type='submit' value='Send Request' />
+                  <input className='submit-button' type='submit' value='Send Request' />
                 </div>
               </form>
             </div>

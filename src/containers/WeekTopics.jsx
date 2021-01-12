@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { connect } from 'react-redux';
 
 import SubSectionHeader from '../components/SubSectionHeader';
@@ -6,6 +6,7 @@ import WeekTopicsItem from '../components/WeekTopicsItem';
 import '../assets/styles/WeekTopics.styl';
 
 const WeekChallenges = ({ topics }) => {
+  const form = useRef(null);
 
   const [collapse, setCollapse] = useState(false);
 
@@ -14,20 +15,15 @@ const WeekChallenges = ({ topics }) => {
     setCollapse(!collapse);
   };
 
-  const handleInput = (event) => {
-    setValues({
-      ...form,
-      [event.target.name]: event.target.value,
-    });
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.addChallenge(form);
-    console.log(form);
-    console.log(challenges);
+    const formData = new FormData(form.current);
+    const newTopic = {
+      title: formData.get('title'),
+      description: formData.get('description'),
+    };
+    props.addChallenge(newTopic);
   };
-
   return (
     <div className='ss-header-main-container'>
       <SubSectionHeader SsName='Topics' isSubSecTopics />
@@ -46,15 +42,15 @@ const WeekChallenges = ({ topics }) => {
           <button onClick={toogleCollapse} type='button'>New Topic Request</button>
           {collapse && (
             <div className='topicRequest-formBody'>
-              <form onSubmit={handleSubmit}>
+              <form ref={form} onSubmit={handleSubmit}>
                 <div className='topicRequest-form-container'>
                   <label htmlFor='title'>
                     Title
-                    <input onChange={handleInput} name='title' id='title' type='text' />
+                    <input name='title' id='title' type='text' />
                   </label>
                   <label htmlFor='description'>
                     Description
-                    <textarea onChange={handleInput} name='description' id='description' type='text' />
+                    <textarea name='description' id='description' type='text' />
                   </label>
                   <input className='submit-button' onClick={handleSubmit} type='submit' value='Send Request' />
                 </div>

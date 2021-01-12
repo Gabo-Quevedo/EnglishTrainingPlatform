@@ -2,21 +2,7 @@ import { ADD_CHALLENGE, ADD_TOPIC, DELETE_CHALLENGE, DELETE_TOPIC, LOGIN_REQUEST
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case LOGIN_REQUEST:
-      return {
-        ...state,
-        user: action.payload,
-      };
-    case LOGOUT_REQUEST:
-      return {
-        ...state,
-        user: action.payload,
-      };
-    case REGISTER_REQUEST:
-      return {
-        ...state,
-        user: action.payload,
-      };
+    //Challenges Reducer**
     case ADD_CHALLENGE:
       return {
         ...state,
@@ -32,6 +18,24 @@ const reducer = (state, action) => {
           ...state.user,
           challenges: [...state.user.challenges.filter(item => item.id !== action.payload)],
         },
+      };
+      //Topics Reducer**
+
+      //Autorization Reducer**
+    case LOGIN_REQUEST:
+      return {
+        ...state,
+        user: action.payload,
+      };
+    case LOGOUT_REQUEST:
+      return {
+        ...state,
+        user: action.payload,
+      };
+    case REGISTER_REQUEST:
+      return {
+        ...state,
+        user: action.payload,
       };
     default:
       return state;

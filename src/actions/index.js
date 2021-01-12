@@ -23,6 +23,8 @@ export const deleteTopic = payload => ({
   payload,
 });
 
+//Skills Actions**
+
 //Autorization Actions**
 export const loginRequest = payload => ({
   type: LOGIN_REQUEST,
