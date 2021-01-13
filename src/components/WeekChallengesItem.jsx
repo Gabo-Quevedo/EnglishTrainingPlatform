@@ -1,8 +1,8 @@
 import React from 'react';
+import { FaTrashAlt } from 'react-icons/fa';
 
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/WeekChallengesItem.styl';
-import '../assets/styles/icons.styl';
 
 const WeekChallengesItem = (props) => {
   const { id, title, minutes, description, situation, handleTrashIcon } = props;
@@ -23,7 +23,7 @@ const WeekChallengesItem = (props) => {
         </p>
         <div className='week-challenges-item-container__statusAction'>
           <span>{situation.request[0]}</span>
-          <Link to='challenges' onClick={() => handleTrashIcon(id)}><div className='trash_icon' /></Link>
+          <Link to='challenges' onClick={() => handleTrashIcon(id)}><FaTrashAlt /></Link>
         </div>
       </div>
     </section>

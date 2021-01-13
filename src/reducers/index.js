@@ -19,9 +19,24 @@ const reducer = (state, action) => {
           challenges: [...state.user.challenges.filter(item => item.id !== action.payload)],
         },
       };
-      //Topics Reducer**
-
-      //Autorization Reducer**
+    //Topics Reducer**
+    case ADD_TOPIC:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          topics: [...state.user.topics, action.payload],
+        },
+      };
+    case DELETE_TOPIC:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          topics: [...state.user.topics.filter(item => item.id !== action.payload)],
+        },
+      };
+    //Autorization Reducer**
     case LOGIN_REQUEST:
       return {
         ...state,

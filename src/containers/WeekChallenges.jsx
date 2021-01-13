@@ -19,7 +19,7 @@ const WeekChallenges = (props) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(form.current);
-    const challengeData = {
+    const newChallenge = {
       id: 10,
       title: formData.get('title'),
       minutes: formData.get('minutes'),
@@ -35,12 +35,11 @@ const WeekChallenges = (props) => {
         ],
       },
     };
-    props.addChallenge(challengeData);
+    props.addChallenge(newChallenge);
     setCollapse(prevCollapse => !prevCollapse);
   };
 
   const handleTrashIcon = (id) => {
-    console.log(id);
     props.deleteChallenge(id);
   };
 

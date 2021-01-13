@@ -1,35 +1,42 @@
 import React, { useRef, useState } from 'react';
 import { connect } from 'react-redux';
+import { addTopic, deleteTopic } from '../actions';
 
 import SubSectionHeader from '../components/SubSectionHeader';
 import WeekTopicsItem from '../components/WeekTopicsItem';
+
 import '../assets/styles/WeekTopics.styl';
 
-const WeekChallenges = ({ topics }) => {
+const WeekTopics = (props) => {
+  const { topics } = props;
+  const [collapse, setCollapse] = useState(false);
   const form = useRef(null);
 
-  const [collapse, setCollapse] = useState(false);
-
   const toogleCollapse = () => {
-    console.log(topics);
-    setCollapse(!collapse);
+    setCollapse(prevCollapse => !prevCollapse);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(form.current);
     const newTopic = {
+      id: 10,
       title: formData.get('title'),
       description: formData.get('description'),
     };
-    props.addChallenge(newTopic);
+    props.addTopic(newTopic);
+    setCollapse(prevCollapse => !prevCollapse);
+  };
+
+  const handleTrashIcon = (id) => {
+    props.deleteTopic(id);
   };
   return (
     <div className='ss-header-main-container'>
       <SubSectionHeader SsName='Topics' isSubSecTopics />
       {topics.length > 0 && (
         topics.map(item => (
-          <WeekTopicsItem key={item.id} {...item} />
+          <WeekTopicsItem handleTrashIcon={handleTrashIcon} key={item.id} {...item} />
         ))
       )}
       {!topics.length && (
@@ -70,4 +77,9 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(WeekChallenges);
+const mapDispatchToProps = {
+  addTopic,
+  deleteTopic,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(WeekTopics);
