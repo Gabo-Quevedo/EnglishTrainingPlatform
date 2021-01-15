@@ -17,24 +17,24 @@ const initialState = {
     'profile': ['user', 'admin', 'sudoAdmin'],
     'skills': [
       {
-        'title': 'listening',
         'id': 1,
-        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        'title': 'listening',
+        'level': [{ 'A1': false, 'A2': false, 'B1': true, 'B2': false, 'C1': false, 'C2': false }],
       },
       {
-        'title': 'reading',
         'id': 2,
-        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        'title': 'reading',
+        'level': [{ 'A1': false, 'A2': true, 'B1': false, 'B2': false, 'C1': false, 'C2': false }],
       },
       {
-        'title': 'writting',
         'id': 3,
-        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        'title': 'writting',
+        'level': [{ 'A1': true, 'A2': false, 'B1': false, 'B2': false, 'C1': false, 'C2': false }],
       },
       {
-        'title': 'speaking',
         'id': 4,
-        'level': ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+        'title': 'speaking',
+        'level': [{ 'A1': false, 'A2': false, 'B1': false, 'B2': false, 'C1': true, 'C2': false }],
       },
     ],
     'topics': [

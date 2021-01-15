@@ -1,4 +1,4 @@
-import { ADD_CHALLENGE, ADD_TOPIC, DELETE_CHALLENGE, DELETE_TOPIC, LOGIN_REQUEST, LOGOUT_REQUEST, REGISTER_REQUEST } from '../types';
+import { ADD_CHALLENGE, ADD_TOPIC, DELETE_CHALLENGE, DELETE_TOPIC, SET_SKILLS, LOGIN_REQUEST, LOGOUT_REQUEST, REGISTER_REQUEST } from '../types';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -36,6 +36,19 @@ const reducer = (state, action) => {
           topics: [...state.user.topics.filter(item => item.id !== action.payload)],
         },
       };
+    //Skills Reducer**
+    case SET_SKILLS:
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          skills: {
+            ...state.user.skills,
+            level: [...state.user.skills.level, action.payload],
+          },
+        },
+      };
+
     //Autorization Reducer**
     case LOGIN_REQUEST:
       return {

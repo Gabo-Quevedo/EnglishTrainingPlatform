@@ -1,4 +1,4 @@
-import { ADD_CHALLENGE, ADD_TOPIC, DELETE_CHALLENGE, DELETE_TOPIC, LOGIN_REQUEST, LOGOUT_REQUEST, REGISTER_REQUEST } from '../types';
+import { ADD_CHALLENGE, ADD_TOPIC, DELETE_CHALLENGE, DELETE_TOPIC, SET_SKILLS, LOGIN_REQUEST, LOGOUT_REQUEST, REGISTER_REQUEST } from '../types';
 /* eslint-disable import/prefer-default-export */
 
 //Challenges Actions**
@@ -24,6 +24,11 @@ export const deleteTopic = payload => ({
 });
 
 //Skills Actions**
+
+export const setSkills = payload => ({
+  type: SET_SKILLS,
+  payload,
+});
 
 //Autorization Actions**
 export const loginRequest = payload => ({

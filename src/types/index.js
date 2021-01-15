@@ -8,6 +8,8 @@ export const ADD_TOPIC = 'add_topIc';
 
 export const DELETE_TOPIC = 'delete_topIc';
 
+export const SET_SKILLS = 'set_skills';
+
 export const LOGIN_REQUEST = 'login_request';
 
 export const LOGOUT_REQUEST = 'logout_request';
